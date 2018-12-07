@@ -1,0 +1,9 @@
+.btn {
+  height: 60px;
+  width: 280px;
+  background: linear-gradient(to right, #2388f0, #00698f);
+  border-radius: 30px;
+  &--light {
+    border: 1px solid white;
+  }
+}

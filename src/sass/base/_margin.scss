@@ -1,0 +1,14 @@
+.margin {
+  &--auto {
+    margin: auto;
+  }
+}
+.d {
+  &--flex {
+    display: flex;
+  }
+}
+.align--center {
+  height: 100%;
+  align-items: center;
+}

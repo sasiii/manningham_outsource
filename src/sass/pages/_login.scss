@@ -1,0 +1,96 @@
+@import "../../sass/helpers/functions";
+@import "../../sass/helpers/mixins";
+@import "../../sass/helpers/variables";
+@import "../../sass/base/color";
+
+.login {
+  padding: 115px 0;
+
+  &__welcome {
+    width: 100%;
+    background: url(../../assets/images/signup-bg.jpg) no-repeat center;
+    background-size: cover;
+    border-radius: 3px 0 0 3px;
+    padding: 200px 0;
+  }
+  &__font {
+    @include setText($font-montserrat, $fw-semi-bold, 33px, auto, white);
+    &--sub {
+      font-size: 16px;
+      font-weight: $fw-medium;
+    }
+    &--upper {
+      text-transform: uppercase;
+    }
+  }
+
+  &__register {
+    padding: 45px 0 55px;
+  }
+  &__center {
+    display: flex;
+    justify-content: center;
+  }
+  &__signin {
+    background: $color-login-bg;
+    border-radius: 0 3px 3px 0;
+    padding: 115px 0 60px;
+  }
+  &__title {
+    color: $blue-color;
+    text-transform: uppercase;
+  }
+  &__sub {
+    padding: 45px 0 35px;
+    @include setText($font-montserrat, $fw-medium, 16px, auto, #636363);
+  }
+  &__name,
+  &__password {
+    width: 100%;
+    background: $color-login-input-bg;
+    padding: 10px 15px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    img {
+      width: 30px;
+      height: 25px;
+      margin-right: 20px;
+    }
+  }
+  &__input {
+    border: none;
+    background: none;
+    &::placeholder {
+      @include setText($font-montserrat, $fw-medium, 16px, auto, black);
+    }
+    &:focus {
+      outline-color: $color-login-input-bg;
+    }
+  }
+  &__btn {
+    border: none;
+    @include setText($font-montserrat, $fw-medium, 16px, auto, white);
+    text-transform: uppercase;
+    &--signup {
+      background: none;
+      margin: 0;
+    }
+  }
+  &__forgot {
+    @include setText($font-montserrat, $fw-medium, 16px, auto, black);
+    border-bottom: 1px solid black;
+    &:hover {
+      text-decoration: none;
+      color: $blue-color;
+      border-bottom: 1px solid $blue-color;
+    }
+  }
+}
+.text-center {
+  text-align: center;
+}
+
+@media screen and (max-width: 576px) {
+  .login {
+  }
+}

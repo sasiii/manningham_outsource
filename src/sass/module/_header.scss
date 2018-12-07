@@ -1,0 +1,82 @@
+@import "../../sass/helpers/functions";
+@import "../../sass/helpers/mixins";
+@import "../../sass/base/color";
+
+.header {
+  &__bg {
+    box-shadow: 0 0 7px rgba(255, 255, 255, 0.35);
+    background-color: black;
+    background-image: linear-gradient(
+      -260deg,
+      #992e98 0%,
+      #ee3e84 52%,
+      #942a93 100%
+    );
+  }
+  &__user {
+    .navbar {
+      padding: 0;
+    }
+  }
+}
+.user {
+  height: 59px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.11);
+  border: 1px solid #d9d9d9;
+  background-color: $color-grey; // padding-left: auto;
+  &__avatar {
+    background-color: white;
+    @include sizeSquare(32px);
+  }
+  &__login {
+    color: $color-blue;
+    padding-left: 1.5rem;
+  }
+  &__account {
+    position: relative;
+    padding-left: 4.5rem;
+    &__currency {
+      position: absolute;
+      top: 0;
+      left: 1.5rem;
+    }
+  }
+  &__text {
+    color: $color-grey-dark;
+    text-transform: uppercase;
+  }
+  &__cart {
+    background-color: $color-pink;
+    width: 3.4rem;
+    height: 2.7rem;
+    padding-right: 1rem;
+    &__icon {
+      @include sizeSquare(18px);
+    }
+  }
+  &__counter {
+    color: white;
+    position: absolute;
+    background-color: $color-red;
+    @include sizeSquare(23px);
+    top: -0.2rem;
+    right: -1rem;
+  }
+  &__left {
+    border-left: 1px solid $color-grey-light;
+    box-shadow: inset 2px 0 0 0 white;
+    height: 47px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .header__user {
+    .bg-light {
+      background-color: $color-grey !important;
+      height: 59px;
+      button {
+        border: none;
+        color: #555555;
+      }
+    }
+  }
+}

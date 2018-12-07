@@ -1,0 +1,11 @@
+@mixin sizeSquare($size) {
+  width: $size;
+  height: $size;
+}
+@mixin setText($font-family, $font-weight, $font-size, $line-height, $color) {
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}

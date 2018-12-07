@@ -10,6 +10,10 @@
 @import "./base/color";
 @import "./base/typography";
 @import "./base/reset";
+@import "./base/padding";
+@import "./base/border";
+@import "./base/margin";
+
 // themes
 @import "./themes/dark_theme";
 @import "./themes/light_theme";
@@ -28,3 +32,8 @@
 @import "./module/cards";
 @import "./module/footer";
 @import "./module/header";
+html,
+body {
+  font-size: 62.5%;
+  font-family: $font-montserrat;
+}
