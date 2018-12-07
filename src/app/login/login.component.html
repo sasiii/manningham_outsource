@@ -8,7 +8,7 @@
             <div class="login__font--upper">welcome</div>
             <div>
               <p
-                class="text-center login__register login__font login__font--sub"
+                class="text-center login__register font__sz--16 login__font--sub"
               >
                 Register with us to submit your Booking Enquiry!
               </p>
@@ -18,43 +18,57 @@
         </div>
       </div>
       <div class="login__center">
-        <button class="btn login__btn--signup">sign up</button>
+        <button
+          class="btn login__btn--signup btn--light font__sz--16 font__w--500 login__font--upper"
+        >
+          sign up
+        </button>
       </div>
     </div>
-    <div class="col-md-7 login__signin">
-      <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-          <p class="text-center login__title login__font">sign in</p>
-          <p class="text-center login__sub">Sign in with email</p>
-          <form novalidate (ngSubmit)="onSubmit()" [formGroup]="rfLogin">
-            <div class="login__name">
-              <img src="../../assets/images/email-icon.svg" alt="" />
-              <input
-                type="mail"
-                class="login__input"
-                placeholder="Email"
-                formControlName="email"
-              />
-            </div>
-            <div class="login__password">
-              <img src="../../assets/images/lock-icon.svg" alt="" />
-              <input
-                type="password"
-                class="login__input"
-                placeholder="Password"
-                formControlName="password"
-              />
-            </div>
-            <div class="login__center">
-              <button class="btn login__submit">sign in</button>
-            </div>
-          </form>
+    <div class="col-md-7 ">
+      <div class="container login__signin">
+        <div class="row">
+          <div class="col-md-3 col-1"></div>
+          <div class="col-md-6 col-10">
+            <p class="text-center login__title login__font">sign in</p>
+            <p class="text-center login__sub">Sign in with email</p>
+            <form novalidate (ngSubmit)="onSubmit()" [formGroup]="rfLogin">
+              <div class="login__name">
+                <img src="../../assets/images/email-icon.svg" alt="" />
+                <input
+                  type="mail"
+                  class="login__input"
+                  placeholder="Email"
+                  formControlName="email"
+                />
+              </div>
+              <div class="login__password">
+                <img src="../../assets/images/lock-icon.svg" alt="" />
+                <input
+                  type="password"
+                  class="login__input"
+                  placeholder="Password"
+                  formControlName="password"
+                />
+              </div>
+              <div class="login__center">
+                <button
+                  class="btn login__submit login__font--upper font__sz--16 font__w--500"
+                >
+                  sign in
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="col-1 col-md-3"></div>
         </div>
-        <div class="col-md-3"></div>
-      </div>
-      <div class="login__center">
-        <a href="" class="text-center login__forgot">Forgot your password?</a>
+        <div class="login__center">
+          <a href="" class="text-center login__forgot">Forgot your password?</a>
+        </div>
+        <div class="sigup--mobile text-center font__sz--18 font__w--500">
+          Don't have an account?
+          <a href="" class="sigup--mobile__link login__font--upper">sign up</a>
+        </div>
       </div>
     </div>
   </div>

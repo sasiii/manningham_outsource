@@ -16,8 +16,7 @@
   &__font {
     @include setText($font-montserrat, $fw-semi-bold, 33px, auto, white);
     &--sub {
-      font-size: 16px;
-      font-weight: $fw-medium;
+      color: white;
     }
     &--upper {
       text-transform: uppercase;
@@ -48,8 +47,8 @@
   &__password {
     width: 100%;
     background: $color-login-input-bg;
-    padding: 10px 15px;
-    border-radius: 3px;
+    padding: 15px;
+    border-radius: 5px;
     margin-bottom: 10px;
     img {
       width: 30px;
@@ -58,8 +57,11 @@
     }
   }
   &__input {
+    height: 25px;
+    min-width: 80%;
     border: none;
     background: none;
+
     &::placeholder {
       @include setText($font-montserrat, $fw-medium, 16px, auto, black);
     }
@@ -76,6 +78,10 @@
       margin: 0;
     }
   }
+  &__submit {
+    margin-top: 65px;
+    margin-bottom: 45px;
+  }
   &__forgot {
     @include setText($font-montserrat, $fw-medium, 16px, auto, black);
     border-bottom: 1px solid black;
@@ -89,8 +95,20 @@
 .text-center {
   text-align: center;
 }
+.sigup--mobile {
+  display: none;
+}
 
 @media screen and (max-width: 576px) {
   .login {
+    padding-top: 80px;
+    &__welcome {
+      display: none;
+    }
+  }
+  .sigup--mobile {
+    display: block;
+    padding-top: 160px;
+    padding-bottom: 90px;
   }
 }

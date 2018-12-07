@@ -69,13 +69,21 @@
   }
 }
 @media screen and (max-width: 576px) {
-  .header__user {
-    .bg-light {
-      background-color: $color-grey !important;
-      height: 59px;
-      button {
-        border: none;
-        color: #555555;
+  .header {
+    &__user {
+      .bg-light {
+        background-color: $color-grey !important;
+        height: 59px;
+        button {
+          border: none;
+          color: #555555;
+        }
+      }
+    }
+    &__logo {
+      display: flex;
+      img {
+        margin: auto;
       }
     }
   }

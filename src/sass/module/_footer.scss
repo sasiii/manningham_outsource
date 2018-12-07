@@ -118,5 +118,13 @@
     position: fixed;
     bottom: 0;
     width: 100%;
+    margin-left: 0;
+    background: $color-grey;
+    img {
+      margin-right: 30px;
+    }
+    &--mb {
+      padding-left: 0;
+    }
   }
 }
