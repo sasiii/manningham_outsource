@@ -9,6 +9,8 @@ import { FacilityComponent } from './facility/facility.component';
 import { BookingComponent } from './booking/booking.component';
 import { CustomerInfoComponent } from './customer-info/customer-info.component';
 import { PaymentComponent } from './payment/payment.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { PaymentComponent } from './payment/payment.component';
     FacilityComponent,
     BookingComponent,
     CustomerInfoComponent,
-    PaymentComponent
+    PaymentComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule
