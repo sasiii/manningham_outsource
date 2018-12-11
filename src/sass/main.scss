@@ -36,17 +36,19 @@
 @import "./module/footer";
 @import "./module/header";
 
-html,
-body {
-  // font-size: 62.5%;
+html {
   font-size: 16px;
-  font-family: $font-montserrat;
+  body {
+    font-size: 62.5%;
+    // font-size: 16px;
+    font-family: $font-montserrat;
 
-  .dark-on-light {
-    @include font-smoothing(off);
-  }
+    .dark-on-light {
+      @include font-smoothing(off);
+    }
 
-  .light-on-dark {
-    @include font-smoothing(on);
+    .light-on-dark {
+      @include font-smoothing(on);
+    }
   }
 }

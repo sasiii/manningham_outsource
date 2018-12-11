@@ -33,33 +33,33 @@
     </div>
     <div class="col-md-7 login__bg">
       <div class="container login__signin dark-on-light">
-        <div class="row">
-          <div class="col-md-2 col-1"></div>
-          <div class="col-md-8 col-10">
-            <p class="text-center login__title font__sz--33 font__w--400">
-              sign in
-            </p>
-            <p class="text-center login__sub font__sz--16 font__w--400">
-              Sign in with email
-            </p>
-            <form novalidate (ngSubmit)="onSubmit()" [formGroup]="rfLogin">
-              <div class="login__name">
-                <img src="../../assets/images/email-icon.svg" alt="" />
-                <input type="mail" class="login__input" placeholder="Email" formControlName="email" />
-              </div>
-              <div class="login__password">
-                <img src="../../assets/images/lock-icon.svg" alt="" />
-                <input type="password" class="login__input" placeholder="Password" formControlName="password" />
-              </div>
-              <div class="login__center">
-                <button class="btn login__submit font__upper font__sz--16 font__w--400">
-                  sign in
-                </button>
-              </div>
-            </form>
-          </div>
-          <div class="col-1 col-md-2"></div>
+        <!-- <div class="row"> -->
+        <!-- <div class="col-md-2 col-1"></div> -->
+        <div class="login__right-sec">
+          <p class="text-center login__title login__signin-text">
+            sign in
+          </p>
+          <p class="text-center login__sub font__sz--16 font__w--400">
+            Sign in with email
+          </p>
+          <form novalidate (ngSubmit)="onSubmit()" [formGroup]="rfLogin">
+            <div class="login__name">
+              <img src="../../assets/images/email-icon.svg" alt="" />
+              <input type="mail" class="login__input" placeholder="Email" formControlName="email" />
+            </div>
+            <div class="login__password">
+              <img src="../../assets/images/lock-icon.svg" alt="" />
+              <input type="password" class="login__input" placeholder="Password" formControlName="password" />
+            </div>
+            <div class="login__center">
+              <button class="btn login__submit font__upper font__sz--16 font__w--400">
+                sign in
+              </button>
+            </div>
+          </form>
         </div>
+        <!-- <div class="col-1 col-md-2"></div> -->
+        <!-- </div> -->
         <div class="login__center">
           <a routerLink="/forgot-password" class="text-center login__forgot font__sz--16 font__w--500">Forgot your
             password?</a>

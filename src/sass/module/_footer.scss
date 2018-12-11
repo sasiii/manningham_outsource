@@ -2,10 +2,14 @@
 @import "../../sass/helpers/mixins";
 @import "../../sass/base/color";
 .footer {
+  .container {
+    padding: 0;
+    @include font-size();
+  }
   &__pd {
     padding: 40px 40px 40px 0;
     &--lb {
-      padding-left: 40px;
+      // padding-left: 40px;
       padding-bottom: 40px;
     }
     &--web {
@@ -15,18 +19,20 @@
 
   &__title {
     padding-bottom: 25px;
-    @include font-size(30);
+    @include font-size(20);
     @include font-weight(semibold);
     color: #373737;
   }
   &__content {
-    @include rhythm(20, 45);
+    @include rhythm(16, 45);
     @include font-weight(regular);
     color: #373737;
   }
   &__social {
     display: flex;
     margin-left: auto;
+    flex-grow: 1;
+    justify-content: space-between;
   }
   &__bg {
     background: rgb(203, 221, 89);
@@ -52,18 +58,18 @@
   }
   &__nav {
     padding-top: 0;
-    font-size: 14px;
-    font-weight: 700;
+    @include font-size(16);
+    @include font-weight(semibold);
     color: #373737;
     &__follow {
-      padding-left: 20px;
+      // padding-left: 20px;
       color: white;
     }
     &__link {
       margin-bottom: 10px;
       a {
-        @include font-size(20);
-        @include font-weight(bold);
+        // @include font-size(20);
+        // @include font-weight(bold);
         color: #373737;
         margin-right: 15px;
       }
