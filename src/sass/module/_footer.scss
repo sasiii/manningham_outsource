@@ -32,7 +32,7 @@
     align-items: center;
     display: flex;
   }
-  &__social-wrapper{
+  &__social-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,38 +65,41 @@
     @include font-weight(semibold);
     color: #373737;
     &__follow {
-      // padding-left: 20px;
+      padding-bottom: 10px;
+      @include font-size(14);
+      @include font-weight(semibold);
       color: white;
     }
     &__link {
       margin-bottom: 10px;
       a {
-        // @include font-size(20);
-        // @include font-weight(bold);
+        @include font-size();
+        @include font-weight(semibold);
         color: #373737;
         margin-right: 15px;
       }
     }
   }
-  &__top-left{
+  &__top-left {
     padding-left: 200px;
   }
-  &__top-right{
+  &__top-right {
     padding-right: 200px;
     padding-left: 50px;
     display: flex;
     flex-direction: column;
   }
-  &__bottom-left{
-    padding-left:50px;
+  &__bottom-left {
+    padding-left: 50px;
     flex-direction: column;
     justify-content: center;
     display: flex;
   }
-  &__bottom-right{
+  &__bottom-right {
     padding-right: 50px;
-    padding-left:50px;
+    padding-left: 50px;
     display: flex;
+    padding-bottom: 15px;
   }
   &__logo {
     width: 100%;
@@ -126,8 +129,9 @@
   }
 }
 .copy-right {
-  padding-left: 10px;
-  font-weight: 500;
+  padding: 15px 0 15px 10px;
+  @include font-size(14);
+  @include font-weight(light);
 }
 .powered__by {
   display: flex;
