@@ -1,40 +1,45 @@
 .font {
-  &__sz--12 {
-    font-size: 12px;
-  }
-  &__sz--16 {
-    font-size: 16px;
-  }
-  &__sz--18 {
-    font-size: 18px;
-  }
-  &__sz--24 {
-    font-size: 24px;
-  }
-  &__sz--32 {
-    font-size: 32px;
-  }
+  //   &__sz--12 {
+  //     font-size: 12px;
+  //   }
+  //   &__sz--16 {
+  //     font-size: 16px;
+  //   }
+  //   &__sz--18 {
+  //     font-size: 18px;
+  //   }
+  //   &__sz--24 {
+  //     font-size: 24px;
+  //   }
+  //   &__sz--32 {
+  //     font-size: 32px;
+  //   }
+  //   &__sz--33 {
+  //     font-size: 33px;
+  //   }
 
-  &__w--300 {
-    font-weight: 300;
+  //   &__w--300 {
+  //     font-weight: 300;
+  //   }
+  //   &--w--400 {
+  //     font-weight: 400;
+  //   }
+  //   &__w--500 {
+  //     font-weight: 500;
+  //   }
+  //   &__w--600 {
+  //     font-weight: 600;
+  //   }
+  //   &__w--700 {
+  //     font-weight: 700;
+  //   }
+  //   &__w--800 {
+  //     font-weight: 800;
+  //   }
+  //   &__w--900 {
+  //     font-weight: 900;
+  //   }
+  &__upper {
+    text-transform: uppercase;
   }
-  &--w--400 {
-    font-weight: 400;
-  }
-  &__w--500 {
-    font-weight: 500;
-  }
-  &__w--600 {
-    font-weight: 600;
-  }
-  &__w--700 {
-    font-weight: 700;
-  }
-  &__w--800 {
-    font-weight: 800;
-  }
-  &__w--900 {
-    font-weight: 900;
-  }
-
 }

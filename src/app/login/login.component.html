@@ -1,73 +1,72 @@
 <div class="login">
   <div class="login__wrap row">
-    <div class="col-md-5 login__welcome">
-      <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-          <div class="text-center login__font ">
-            <div class="login__font--upper">welcome</div>
-            <div>
-              <p
-                class="text-center login__register font__sz--16 login__font--sub"
-              >
-                Register with us to submit your Booking Enquiry!
-              </p>
-            </div>
-            <div class="col-md-3"></div>
-          </div>
+    <div class="col-md-5 login__welcome light-on-dark">
+      <!-- <div class="row"> -->
+      <!-- <div class="col-md-6"> -->
+      <div class="login__center login__left-sec">
+        <div class="font__upper login__welcome-text">welcome</div>
+        <div>
+          <p class="text-center login__register">
+            Register with us to submit your Booking Enquiry!
+          </p>
         </div>
       </div>
+      <!-- </div> -->
+      <!-- </div> -->
       <div class="login__center">
-        <button
-          class="btn login__btn--signup btn--light font__sz--16 font__w--500 login__font--upper"
-        >
+        <button class="btn login__btn--signup btn--light font__upper">
           sign up
         </button>
       </div>
+      <ul class="bg-bubbles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
     </div>
-    <div class="col-md-7 ">
-      <div class="container login__signin">
+    <div class="col-md-7 login__bg">
+      <div class="container login__signin dark-on-light">
         <div class="row">
-          <div class="col-md-3 col-1"></div>
-          <div class="col-md-6 col-10">
-            <p class="text-center login__title login__font">sign in</p>
-            <p class="text-center login__sub">Sign in with email</p>
+          <div class="col-md-2 col-1"></div>
+          <div class="col-md-8 col-10">
+            <p class="text-center login__title font__sz--33 font__w--400">
+              sign in
+            </p>
+            <p class="text-center login__sub font__sz--16 font__w--400">
+              Sign in with email
+            </p>
             <form novalidate (ngSubmit)="onSubmit()" [formGroup]="rfLogin">
               <div class="login__name">
                 <img src="../../assets/images/email-icon.svg" alt="" />
-                <input
-                  type="mail"
-                  class="login__input"
-                  placeholder="Email"
-                  formControlName="email"
-                />
+                <input type="mail" class="login__input" placeholder="Email" formControlName="email" />
               </div>
               <div class="login__password">
                 <img src="../../assets/images/lock-icon.svg" alt="" />
-                <input
-                  type="password"
-                  class="login__input"
-                  placeholder="Password"
-                  formControlName="password"
-                />
+                <input type="password" class="login__input" placeholder="Password" formControlName="password" />
               </div>
               <div class="login__center">
-                <button
-                  class="btn login__submit login__font--upper font__sz--16 font__w--500"
-                >
+                <button class="btn login__submit font__upper font__sz--16 font__w--400">
                   sign in
                 </button>
               </div>
             </form>
           </div>
-          <div class="col-1 col-md-3"></div>
+          <div class="col-1 col-md-2"></div>
         </div>
         <div class="login__center">
-          <a href="" class="text-center login__forgot">Forgot your password?</a>
+          <a routerLink="/forgot-password" class="text-center login__forgot font__sz--16 font__w--500">Forgot your
+            password?</a>
         </div>
         <div class="sigup--mobile text-center font__sz--18 font__w--500">
           Don't have an account?
-          <a href="" class="sigup--mobile__link login__font--upper">sign up</a>
+          <a href="" class="sigup--mobile__link font__upper">sign up</a>
         </div>
       </div>
     </div>

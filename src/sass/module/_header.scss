@@ -3,6 +3,7 @@
 @import "../../sass/base/color";
 
 .header {
+  padding: 15px 0;
   &__bg {
     box-shadow: 0 0 7px rgba(255, 255, 255, 0.35);
     background-color: black;
@@ -12,6 +13,11 @@
       #ee3e84 52%,
       #942a93 100%
     );
+  }
+  &__logo {
+    img {
+      max-height: 70px;
+    }
   }
   &__user {
     .navbar {
@@ -58,20 +64,20 @@
     color: white;
     position: absolute;
     background-color: $color-red;
-    @include sizeSquare(23px);
+    @include sizeSquare(2.3rem);
     top: -0.2rem;
     right: -1rem;
   }
   &__left {
     border-left: 1px solid $color-grey-light;
     box-shadow: inset 2px 0 0 0 white;
-    height: 47px;
+    height: 4.7rem;
   }
 }
 @media screen and (max-width: 576px) {
   .header {
     &__user {
-      .bg-light {
+      .bg--light {
         background-color: $color-grey !important;
         height: 59px;
         button {

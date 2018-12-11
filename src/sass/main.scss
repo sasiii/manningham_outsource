@@ -2,6 +2,9 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900");
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~font-awesome/css/font-awesome.css";
+
+// @import "./base/normalize";
+
 // helper
 @import "./helpers/functions";
 @import "./helpers/mixins";
@@ -32,8 +35,18 @@
 @import "./module/cards";
 @import "./module/footer";
 @import "./module/header";
+
 html,
 body {
-  font-size: 62.5%;
+  // font-size: 62.5%;
+  font-size: 16px;
   font-family: $font-montserrat;
+
+  .dark-on-light {
+    @include font-smoothing(off);
+  }
+
+  .light-on-dark {
+    @include font-smoothing(on);
+  }
 }

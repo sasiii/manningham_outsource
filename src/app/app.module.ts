@@ -12,7 +12,12 @@ import { PaymentComponent } from "./payment/payment.component";
 import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { RouterModule, Routes } from "@angular/router";
 
+const appRoutes: Routes = [
+  { path: "forgot-password", component: ForgotPasswordComponent },
+  { path: "", component: LoginComponent }
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +31,12 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     HeaderComponent,
     FooterComponent
   ],
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes)
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
