@@ -35,8 +35,11 @@
     @include sizeSquare(32px);
   }
   &__login {
+    text-decoration: none;
     color: $color-blue;
     padding-left: 1.5rem;
+    @include font-size(14);
+    @include font-weight(semibold);
   }
   &__account {
     position: relative;
@@ -45,17 +48,25 @@
       position: absolute;
       top: 0;
       left: 1.5rem;
+      @include font-size(14);
+      @include font-weight(regular);
+      text-transform: uppercase;
     }
-  }
-  &__text {
-    color: $color-grey-dark;
-    text-transform: uppercase;
+    &__text {
+      color: $color-grey-dark;
+      text-transform: uppercase;
+      @include font-size(18);
+      @include font-weight(bold);
+      padding-right: 10px;
+    }
   }
   &__cart {
     background-color: $color-pink;
-    width: 3.4rem;
-    height: 2.7rem;
-    padding-right: 1rem;
+    // width: 3.4rem;
+    // height: 2.7rem;
+    // padding-right: 1rem;
+    width: 40px;
+    height: 32px;
     &__icon {
       @include sizeSquare(18px);
     }
@@ -64,14 +75,18 @@
     color: white;
     position: absolute;
     background-color: $color-red;
-    @include sizeSquare(2.3rem);
-    top: -0.2rem;
-    right: -1rem;
+    // @include sizeSquare(2rem);
+    height: 23px;
+    width: 23px;
+    top: -11px;
+    right: -11px;
+    // top: -0.2rem;
+    // right: -1rem;
   }
   &__left {
     border-left: 1px solid $color-grey-light;
     box-shadow: inset 2px 0 0 0 white;
-    height: 4.7rem;
+    // height: 4.7rem;
   }
 }
 @media screen and (max-width: 576px) {
