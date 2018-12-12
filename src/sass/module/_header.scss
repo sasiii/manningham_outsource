@@ -3,6 +3,9 @@
 @import "../../sass/base/color";
 
 .header {
+  &__alter-menu {
+    @include padding-right(85);
+  }
   padding: 15px 0;
   &__bg {
     box-shadow: 0 0 7px rgba(255, 255, 255, 0.35);

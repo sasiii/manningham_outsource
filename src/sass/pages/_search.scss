@@ -1,0 +1,111 @@
+@import "../helpers/mixins";
+.man_ {
+  &outer-wrapper {
+    border: 1px solid lightgray;
+    border-radius: 3px;
+  }
+  &inner-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .items {
+      @include padding-left(10);
+      //   @include padding-right(10);
+    }
+    .mat-form-field {
+      width: 100%;
+    }
+  }
+  &wrapper-items--left {
+    flex-grow: 1;
+  }
+  &wrapper-items--right {
+    .inner-right {
+      display: flex;
+      .mat-form-field-suffix {
+        @include padding-right(7);
+      }
+      .items {
+        &.date,
+        &.time,
+        &.filter {
+          border-left: 1px solid lightgray;
+          display: flex;
+          align-items: center;
+          .mat-form-field-infix {
+            @include respond-to("x-small") {
+              display: none;
+            }
+            @include respond-to("small") {
+              display: block;
+            }
+          }
+          .image-wrapper {
+            div {
+              @include respond-to("x-small") {
+                display: none;
+              }
+              @include respond-to("small") {
+                display: block;
+              }
+            }
+          }
+        }
+
+        &:last-child {
+          .serarch-btn {
+            height: 100%;
+            background-color: $color-pink;
+            color: #ffff;
+            .btn-text {
+              @include respond-to("x-small") {
+                display: none;
+              }
+              @include respond-to("small") {
+                display: block;
+              }
+            }
+            .mat-button-wrapper {
+              display: flex;
+              align-items: center;
+              flex-direction: row;
+              i {
+                padding-right: 5px;
+              }
+            }
+          }
+          .mat-button {
+            border-radius: 0 3px 3px 0 !important;
+          }
+        }
+        .image-wrapper {
+          display: flex;
+          flex-direction: column;
+          img {
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mat-form-field-underline {
+  height: 0px !important;
+  display: none !important;
+}
+.mat-font--change {
+  font-family: $font-montserrat;
+  @include font-size();
+}
+.mat-form-field-infix {
+  @include font-size();
+}
+.mat-button {
+  font-family: $font-montserrat;
+  @include font-size();
+}
+.mat-icon-button,
+.mat-icon {
+  font-size: 25px !important;
+}

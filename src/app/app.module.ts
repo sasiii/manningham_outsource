@@ -1,5 +1,11 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { NgModule } from "@angular/core";
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
+import { MaterialcomponentsModule } from './materialcomponets';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+
+
 
 import { AppComponent } from "./app.component";
 import { LoginComponent } from "./login/login.component";
@@ -16,7 +22,9 @@ import { RouterModule, Routes } from "@angular/router";
 
 const appRoutes: Routes = [
   { path: "forgot-password", component: ForgotPasswordComponent },
-  { path: "", component: LoginComponent }
+  { path: "search", component: SearchComponent },
+  // { path: "", component: LoginComponent }
+  { path: "", component: SearchComponent }
 ];
 @NgModule({
   declarations: [
@@ -33,11 +41,16 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MaterialcomponentsModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule {}
+export class AppModule { }

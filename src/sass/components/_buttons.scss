@@ -1,3 +1,4 @@
+@import "../layout/grid";
 .btn {
   // @include respond-to("xx-large") {
   height: 60px;
@@ -8,6 +9,10 @@
   &--light {
     border: 1px solid white;
     color: white;
+  }
+  // }
+  @include respond-to("xxx-large") {
+    height: 55px;
   }
 }
 // }

@@ -1,3 +1,49 @@
-<p>
-  search works!
-</p>
+<div class="man_search">
+  <div class="container-fluid">
+    <div class="container">
+      <div class="man_outer-wrapper">
+        <div class="man_inner-wrapper">
+          <div class="man_wrapper-items--left">
+            <div class="">
+              <div class="items">
+                <mat-form-field class="example-full-width">
+                  <input type="tel" matInput placeholder="" value="Search Venue, Facility or Location" class="mat-font--change">
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <div class="man_wrapper-items--right">
+            <div class="inner-right">
+              <div class="items date">
+                <mat-form-field>
+                  <input matInput [matDatepicker]="picker" placeholder="" value="Date" class="mat-font--change">
+                  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                  <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field>
+              </div>
+              <div class="items time">
+                <mat-form-field class="example-full-width">
+                  <input type="tel" matInput placeholder="" value="Time" class="mat-font--change">
+                  <mat-icon matSuffix>access_time</mat-icon>
+                </mat-form-field>
+              </div>
+              <div class="items filter">
+                <div class="image-wrapper">
+                  <img src="../../assets/images/funnel.svg" alt="funnel icon" />
+                  <div class="font__normal font__upper">filter</div>
+                </div>
+              </div>
+              <div class="items">
+                <button mat-button class="serarch-btn">
+                  <i class="material-icons">
+                    search
+                  </i>
+                  <span class="btn-text">Search</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

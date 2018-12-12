@@ -1,3 +1,5 @@
+@import "../helpers/mixins";
+
 .font {
   //   &__sz--12 {
   //     font-size: 12px;
@@ -41,5 +43,63 @@
   //   }
   &__upper {
     text-transform: uppercase;
+  }
+
+  //font weight classes
+  &__light {
+    @include font-weight(light);
+  }
+  &__regular {
+    @include font-weight(regular);
+  }
+  &__medium {
+    @include font-weight(medium);
+  }
+  &__semibold {
+    @include font-weight(semibold);
+  }
+  &__bold {
+    @include font-weight(bold);
+  }
+  &__xbold {
+    @include font-weight(extrabold);
+  }
+  &__black {
+    @include font-weight(black);
+  }
+
+  //font size classes
+  &__xsmall {
+    @include font-size(12);
+  }
+  &__small {
+    @include font-size(13);
+  }
+  &__normal {
+    @include font-size(14);
+  }
+  &__large {
+    @include font-size(16);
+  }
+  &__xlarge {
+    @include font-size(18);
+  }
+  &__h6 {
+    @include font-size(20);
+  }
+  &__h5 {
+    @include font-size(24);
+  }
+  &__h4 {
+    @include font-size(28);
+  }
+  &__h3 {
+    @include font-size(32);
+  }
+  &__h2 {
+    @include font-size(36);
+  }
+  &__h1 {
+    @include font-size(40);
   }
 }

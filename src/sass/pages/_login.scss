@@ -2,6 +2,7 @@
 @import "../../sass/helpers/mixins";
 @import "../../sass/helpers/variables";
 @import "../../sass/base/color";
+@import "../layout/grid";
 
 .login {
   padding: 60px 0;
@@ -28,7 +29,7 @@
     @include font-size;
   }
   &__left-sec {
-    @include padding(0, 15, 0, 15);
+    // @include padding(padding, all, 0 15);
     align-items: center;
     flex-direction: column;
     display: flex;
@@ -39,6 +40,14 @@
     flex-direction: column;
     display: flex;
     justify-content: center;
+    form {
+      @include respond-to("x-small") {
+        width: 90%;
+      }
+      @include respond-to("small") {
+        width: 70%;
+      }
+    }
   }
   &__center {
     display: flex;
@@ -49,8 +58,14 @@
   }
   &__signin {
     background: $color-login-bg;
-    border-radius: 0 10px 10px 0;
-    padding: 65px 0 20px;
+    // border-radius: 0 10px 10px 0;
+    padding: 50px 0 50px;
+    @include respond-to("x-small") {
+      border-radius: 10px;
+    }
+    @include respond-to("small") {
+      border-radius: 0 10px 10px 0;
+    }
   }
   &__signin-text {
     @include font-size(33);
@@ -74,6 +89,7 @@
       width: 25px;
       height: 25px;
       margin-right: 20px;
+      vertical-align: middle;
     }
   }
 
@@ -131,18 +147,20 @@
 
 @media screen and (max-width: 576px) {
   .login {
-    padding-top: 80px;
+    padding-top: 20px;
     &__welcome {
       display: none;
     }
     &__bg {
       background: none;
+      border-radius: 0;
+      padding-bottom: 50px;
     }
   }
   .sigup--mobile {
     display: block;
-    padding-top: 160px;
-    padding-bottom: 90px;
+    padding-top: 100px;
+    padding-bottom: 30px;
     color: $color-text-dark;
     &--link {
       color: $color-text-link;
@@ -164,7 +182,7 @@
   li {
     position: absolute;
     list-style: none;
-    background-color: #ffffff;
+    background-color: #c6afaf;
     opacity: 0.1;
     display: block;
     width: 40px;

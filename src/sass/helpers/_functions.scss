@@ -37,6 +37,7 @@
   }
   @return map-get($conversion-map, $keyword);
 }
+// Font weight
 @mixin font-weight($keyword) {
   font-weight: font-weight($keyword);
 }
