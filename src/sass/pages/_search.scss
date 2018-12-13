@@ -1,6 +1,7 @@
 @import "../helpers/mixins";
 .man_ {
   &outer-wrapper {
+    margin: 10px 0;
     border: 1px solid lightgray;
     border-radius: 3px;
   }
@@ -9,7 +10,8 @@
     justify-content: space-between;
     flex-wrap: wrap;
     .items {
-      @include padding-left(10);
+      // flex-grow: 1;
+      // @include padding-all(10);
       //   @include padding-right(10);
     }
     .mat-form-field {
@@ -17,20 +19,36 @@
     }
   }
   &wrapper-items--left {
+    // width: 60%;
     flex-grow: 1;
+    @include respond-to("small") {
+      border-bottom: 1px solid lightgray;
+    }
+    @include respond-to("xxx-large") {
+      border-bottom: unset;
+    }
   }
   &wrapper-items--right {
+    // width: 40%;
     .inner-right {
       display: flex;
+      // flex-grow: 1;
+      @include respond-to("x-small") {
+        // border-bottom: 1px solid lightgray;
+      }
+      @include respond-to("medium") {
+        width: 100%;
+      }
       .mat-form-field-suffix {
         @include padding-right(7);
       }
       .items {
+        flex-grow: 1;
         &.date,
         &.time,
         &.filter {
           border-left: 1px solid lightgray;
-          display: flex;
+          // display: flex;
           align-items: center;
           .mat-form-field-infix {
             @include respond-to("x-small") {
@@ -81,6 +99,9 @@
         .image-wrapper {
           display: flex;
           flex-direction: column;
+          .mat-button {
+            min-width: unset;
+          }
           img {
             height: 25px;
           }
