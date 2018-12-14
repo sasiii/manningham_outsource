@@ -23,7 +23,7 @@ import { RouterModule, Routes } from "@angular/router";
 const appRoutes: Routes = [
   { path: "forgot-password", component: ForgotPasswordComponent },
   { path: "search", component: SearchComponent },
-  // { path: "", component: LoginComponent }
+  { path: "login", component: LoginComponent },
   { path: "", component: SearchComponent }
 ];
 @NgModule({
