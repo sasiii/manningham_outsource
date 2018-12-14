@@ -6,7 +6,7 @@
           <div class="man_wrapper-items--left">
             <div class="">
               <div class="items">
-                <mat-form-field class="example-full-width">
+                <mat-form-field class="example-full-width remove_underline">
                   <input type="tel" matInput placeholder="" value="Search Venue, Facility or Location" class="mat-font--change">
                 </mat-form-field>
               </div>
@@ -15,23 +15,65 @@
           <div class="man_wrapper-items--right">
             <div class="inner-right">
               <div class="items date">
-                <mat-form-field>
+                <mat-form-field class="remove_underline">
                   <input matInput [matDatepicker]="picker" placeholder="" value="Date" class="mat-font--change">
                   <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
                   <mat-datepicker #picker></mat-datepicker>
                 </mat-form-field>
               </div>
               <div class="items time">
-                <mat-form-field class="example-full-width">
+                <mat-form-field class="example-full-width remove_underline">
                   <input type="tel" matInput placeholder="" value="Time" class="mat-font--change">
-                  <mat-icon matSuffix>access_time</mat-icon>
+                  <mat-icon [matMenuTriggerFor]="menu" matSuffix>access_time</mat-icon>
+                  <mat-menu #menu="matMenu" class="time-popup">
+                    <div class="mmc_flex--container" (click)="$event.stopPropagation();">
+                      <div class="mmc_flex__item">
+                        <div class="mmc_flex--container">
+                          <div class="mmc_flex__item clock">
+                            <i class="material-icons">
+                              access_time
+                            </i>
+                          </div>
+                          <div class="mmc_flex__item">
+                            <mat-form-field [color]="options.value.color">
+                              <input matInput type="number" placeholder="START TIME" formControlName="fontSize" min="10">
+                              <mat-error *ngIf="options.get('fontSize')?.invalid">Min size: 10px</mat-error>
+                            </mat-form-field>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="mmc_flex__item">
+                        <div class="mmc_flex--container">
+                          <div class="mmc_flex__item clock">
+                            <i class="material-icons">
+                              access_time
+                            </i>
+                          </div>
+                          <div class="mmc_flex__item">
+                            <mat-form-field [color]="options.value.color">
+                              <input matInput type="number" placeholder="END TIME" formControlName="fontSize" min="10">
+                              <mat-error *ngIf="options.get('fontSize')?.invalid">Min size: 10px</mat-error>
+                            </mat-form-field>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mmc_flex--container btn-content">
+                      <div class="btn__card main mmc_flex__item--vcenter">
+                        APPLY
+                      </div>
+                    </div>
+                  </mat-menu>
                 </mat-form-field>
               </div>
               <div class="items filter">
-                <button mat-button class="image-wrapper">
+                <div class="image-wrapper" [matMenuTriggerFor]="menu1">
                   <img src="../../assets/images/funnel.svg" alt="funnel icon" />
                   <div class="font__normal font__upper">filter</div>
-                </button>
+                </div>
+                <mat-menu #menu1="matMenu" class="filter-popup">
+                  <div class="mmc_flex--container" (click)="$event.stopPropagation();"></div>
+                </mat-menu>
               </div>
               <div class="items">
                 <button mat-button class="serarch-btn">

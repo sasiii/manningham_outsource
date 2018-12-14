@@ -1,3 +1,30 @@
-<p>
-  payment works!
-</p>
+<div class="container">
+  <div class="mmc_payment mmc_card payment">
+    <div class="mmc_flex--container flex-column">
+      <div class="mmc_flex__item main-row">
+        <div class="mmc_flex--container">
+          <div class="mmc_flex__item p75">
+            <mat-form-field class="example-full-width">
+              <input matInput placeholder="Invoice Reference Number/CRN" value="Enter Invoice Reference Number/CRN">
+            </mat-form-field>
+          </div>
+          <div class="mmc_flex__item--vcenter p25">
+            <div class="">
+              <button class="btn__validate" mat-button>validate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mmc_flex__item main-row">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Payment Amount" value="1000">
+        </mat-form-field>
+      </div>
+      <div class="mcc_flex__item main-row btn-section">
+        <button class="btn login__submit font__large font__regular font__upper">
+          proceed to pay
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

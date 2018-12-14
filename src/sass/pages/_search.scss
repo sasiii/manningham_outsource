@@ -1,120 +1,151 @@
 @import "../helpers/mixins";
+
 .man_ {
-  &outer-wrapper {
-    margin: 10px 0;
-    border: 1px solid lightgray;
-    border-radius: 3px;
-  }
-  &inner-wrapper {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    .items {
-      // flex-grow: 1;
-      // @include padding-all(10);
-      //   @include padding-right(10);
-    }
-    .mat-form-field {
-      width: 100%;
-    }
-  }
-  &wrapper-items--left {
-    // width: 60%;
-    flex-grow: 1;
-    @include respond-to("small") {
-      border-bottom: 1px solid lightgray;
-    }
-    @include respond-to("xxx-large") {
-      border-bottom: unset;
-    }
-  }
-  &wrapper-items--right {
-    // width: 40%;
-    .inner-right {
-      display: flex;
-      // flex-grow: 1;
-      @include respond-to("x-small") {
-        // border-bottom: 1px solid lightgray;
+  &search {
+    .container-fluid {
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+      .container {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
       }
-      @include respond-to("medium") {
+    }
+    .man_outer-wrapper {
+      margin: 10px 0;
+      border: 1px solid lightgray;
+      border-radius: 3px;
+    }
+    .man_inner-wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .items {
+        // flex-grow: 1;
+        // @include padding-all(10);
+        //   @include padding-right(10);
+      }
+      .mat-form-field {
         width: 100%;
       }
-      .mat-form-field-suffix {
-        @include padding-right(7);
+    }
+    .man_wrapper-items--left {
+      // width: 60%;
+      flex-grow: 1;
+      @include respond-to("small") {
+        border-bottom: 1px solid lightgray;
       }
-      .items {
-        flex-grow: 1;
-        &.date,
-        &.time,
-        &.filter {
-          border-left: 1px solid lightgray;
-          // display: flex;
-          align-items: center;
-          .mat-form-field-infix {
-            @include respond-to("x-small") {
-              display: none;
+      @include respond-to("xxx-large") {
+        border-bottom: unset;
+      }
+    }
+    .man_wrapper-items--right {
+      // width: 40%;
+      .inner-right {
+        display: flex;
+        // flex-grow: 1;
+        @include respond-to("x-small") {
+          // border-bottom: 1px solid lightgray;
+        }
+        @include respond-to("medium") {
+          width: 100%;
+        }
+        .mat-form-field-suffix {
+          @include padding-right(7);
+        }
+        .items {
+          flex-grow: 1;
+          flex-basis: 25%;
+          &.date,
+          &.time,
+          &.filter {
+            border-left: 1px solid lightgray;
+            // display: flex;
+            align-items: center;
+            .mat-form-field-infix {
+              @include respond-to("x-small") {
+                display: none;
+              }
+              @include respond-to("small") {
+                display: block;
+              }
             }
-            @include respond-to("small") {
-              display: block;
+            .image-wrapper {
+              div {
+                @include respond-to("x-small") {
+                  display: none;
+                }
+                @include respond-to("small") {
+                  display: block;
+                }
+              }
+            }
+          }
+
+          &:last-child {
+            .serarch-btn {
+              height: 100%;
+              background-color: $color-pink;
+              color: #ffff;
+              .btn-text {
+                @include respond-to("x-small") {
+                  display: none;
+                }
+                @include respond-to("small") {
+                  display: block;
+                }
+              }
+              .mat-button-wrapper {
+                display: flex;
+                align-items: center;
+                flex-direction: row;
+                i {
+                  padding-right: 5px;
+                }
+              }
+            }
+            .mat-button {
+              border-radius: 0 3px 3px 0 !important;
             }
           }
           .image-wrapper {
-            div {
-              @include respond-to("x-small") {
-                display: none;
-              }
-              @include respond-to("small") {
-                display: block;
-              }
+            display: flex;
+            flex-direction: column;
+            .mat-button {
+              min-width: unset;
+            }
+            img {
+              height: 25px;
             }
           }
         }
-
-        &:last-child {
-          .serarch-btn {
-            height: 100%;
-            background-color: $color-pink;
-            color: #ffff;
-            .btn-text {
-              @include respond-to("x-small") {
-                display: none;
-              }
-              @include respond-to("small") {
-                display: block;
-              }
-            }
-            .mat-button-wrapper {
-              display: flex;
-              align-items: center;
-              flex-direction: row;
-              i {
-                padding-right: 5px;
-              }
-            }
-          }
-          .mat-button {
-            border-radius: 0 3px 3px 0 !important;
-          }
-        }
-        .image-wrapper {
-          display: flex;
-          flex-direction: column;
-          .mat-button {
-            min-width: unset;
-          }
-          img {
-            height: 25px;
-          }
+      }
+    }
+    .mat-form-field {
+      &.remove_underline {
+        .mat-form-field-underline {
+          height: 0px !important;
+          display: none !important;
         }
       }
     }
   }
 }
-
-.mat-form-field-underline {
-  height: 0px !important;
-  display: none !important;
+.time-popup {
+  padding: 10px;
+  max-width: 100% !important;
+  .clock {
+    padding-right: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .btn-content {
+    justify-content: flex-end !important;
+  }
+  .material-icons {
+    display: inline !important;
+  }
 }
+
 .mat-font--change {
   font-family: $font-montserrat;
   @include font-size();

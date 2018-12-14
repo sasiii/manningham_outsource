@@ -1,0 +1,22 @@
+@import "../components/buttons";
+.mmc_ {
+  &payment {
+    padding: 20px 0;
+    margin: 50px auto;
+    .flex-column {
+      padding: 20px;
+      flex-direction: column;
+    }
+    .main-row {
+      @include padding-all(20);
+    }
+    .mat-form-field {
+      display: block;
+    }
+    .btn-section {
+      @include padding-left(10);
+      margin: auto;
+      //   width: 100%;
+    }
+  }
+}
