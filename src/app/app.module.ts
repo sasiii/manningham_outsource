@@ -20,12 +20,13 @@ import { FooterComponent } from "./footer/footer.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule, Routes } from "@angular/router";
 import { SearchResultComponent } from './search-result/search-result.component';
+import { BookingSearchComponent } from './booking-search/booking-search.component';
 
 const appRoutes: Routes = [
   { path: "forgot-password", component: ForgotPasswordComponent },
   { path: "search", component: SearchComponent },
   { path: "login", component: LoginComponent },
-  { path: "", component: SearchComponent },
+  { path: "", component: BookingSearchComponent },
   // { path: "", component: LoginComponent }
   { path: "search-result", component: SearchResultComponent },
   { path: "payment", component: PaymentComponent }
@@ -42,7 +43,8 @@ const appRoutes: Routes = [
     PaymentComponent,
     HeaderComponent,
     FooterComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    BookingSearchComponent
   ],
   imports: [
     BrowserModule,
