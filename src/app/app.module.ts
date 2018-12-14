@@ -21,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule, Routes } from "@angular/router";
 import { SearchResultComponent } from './search-result/search-result.component';
 import { BookingSearchComponent } from './booking-search/booking-search.component';
+import { BookingDetailsComponent } from './booking-details/booking-details.component';
 
 const appRoutes: Routes = [
   { path: "forgot-password", component: ForgotPasswordComponent },
@@ -29,7 +30,9 @@ const appRoutes: Routes = [
   { path: "", component: BookingSearchComponent },
   // { path: "", component: LoginComponent }
   { path: "search-result", component: SearchResultComponent },
-  { path: "payment", component: PaymentComponent }
+  { path: "payment", component: PaymentComponent },
+  { path: "booking-details", component: BookingDetailsComponent }
+
 ];
 @NgModule({
   declarations: [
@@ -44,7 +47,8 @@ const appRoutes: Routes = [
     HeaderComponent,
     FooterComponent,
     SearchResultComponent,
-    BookingSearchComponent
+    BookingSearchComponent,
+    BookingDetailsComponent
   ],
   imports: [
     BrowserModule,
