@@ -14,5 +14,34 @@
   @include respond-to("xxx-large") {
     height: 55px;
   }
+
+  
 }
 // }
+
+.btn__card {
+ cursor: pointer;
+ text-align: center;
+ 
+&.main{
+  @include border-radius(5px);
+  @include font-size_defalt(16);
+  border: 1px solid #006ff8;
+  padding: 5px;
+  font-weight: 600;
+  height: 40px;
+  color:#006ff8;
+  transition: all 0.5s ease;
+  @include justify-content(center);
+  
+
+  &:hover{
+    background-color:#006ff8;
+    color: #fff; 
+    
+  }
+ 
+}
+
+
+}

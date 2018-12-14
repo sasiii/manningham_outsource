@@ -19,12 +19,13 @@ import { HeaderComponent } from "./header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { RouterModule, Routes } from "@angular/router";
+import { SearchResultComponent } from './search-result/search-result.component';
 
 const appRoutes: Routes = [
   { path: "forgot-password", component: ForgotPasswordComponent },
   { path: "search", component: SearchComponent },
   // { path: "", component: LoginComponent }
-  { path: "", component: SearchComponent }
+  { path: "", component: SearchResultComponent }
 ];
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ const appRoutes: Routes = [
     CustomerInfoComponent,
     PaymentComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SearchResultComponent
   ],
   imports: [
     BrowserModule,

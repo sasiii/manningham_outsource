@@ -1,5 +1,11 @@
 @import "functions";
 
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
 @mixin sizeSquare($size) {
   width: $size;
   height: $size;
@@ -31,6 +37,21 @@
   letter-spacing: (0.12 * $fontVal) + rem;
   line-height: (1.5 * $fontVal) + rem;
   word-spacing: (0.16 * $fontVal) + rem;
+}
+// @mixin font-size_defalt($sizeValue) {
+//   font-size: $size * 1px
+//   font-size: $size * 0.1rem
+//  // letter-spacing: (0.12 * $fontVal) + rem;
+//  // line-height: (1.5 * $fontVal) + rem;
+//  // word-spacing: (0.16 * $fontVal) + rem;
+// }
+
+$base_font_size: 16;
+
+@mixin font-size_defalt($pixels) {
+font-size: $pixels + px;
+font-size: ( $pixels / $base_font_size ) + rem;
+//font-weight: $weight;
 }
 
 //Adds line-height in rem & px
@@ -90,4 +111,54 @@
 @mixin margin-left($margin) {
   margin-left: $margin + px;
   margin-left: $margin * 0.0625 + rem;
+}
+
+
+
+$breakpoints-typography: (
+  'x-small':  300px,
+  'small'  :  768px,
+  'medium' :  1024px,
+  'large'  :  1200px,
+  'x-large':  1440px,
+  'xx-large':  1600px
+);
+@mixin respond-to($breakpoint) {
+  @content;
+  @if map-has-key($breakpoints-typography, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints-typography, $breakpoint)}) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Please make sure it is defined in `$breakpoints` map.";
+  }
+}
+
+
+
+@mixin box_shadow ($level) {
+
+  @if $level == 1 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  } @else if $level == 2 {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  } @else if $level == 3 {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  } @else if $level == 4 {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  } @else if $level == 5 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
+
+}
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius !important;
+  -moz-border-radius: $radius !important;
+  -ms-border-radius: $radius !important;
+  border-radius: $radius !important;
 }
