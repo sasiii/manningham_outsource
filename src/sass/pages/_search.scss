@@ -1,7 +1,24 @@
-@import "../helpers/mixins";
 
 .man_ {
   &search {
+
+    .mat-form-field-wrapper{
+
+    }
+    .mat-form-field-infix{
+      padding: 0;
+      border: 0;
+    }
+    .mat-form-field-wrapper{
+      padding: 0;
+    }
+    .search-input{
+       margin: 0px;
+      color: #4f4f4f;
+      font-size: 16px;
+      padding-left: 10px;
+
+    }
     .container-fluid {
       padding-right: 0 !important;
       padding-left: 0 !important;
@@ -32,10 +49,10 @@
       // width: 60%;
       flex-grow: 1;
       @include respond-to("small") {
-        border-bottom: 1px solid lightgray;
+       // border-bottom: 1px solid lightgray;
       }
       @include respond-to("xxx-large") {
-        border-bottom: unset;
+       // border-bottom: unset;
       }
     }
     .man_wrapper-items--right {
