@@ -66,18 +66,18 @@
     transition: all 0.5s ease;
 
     @include respond-to("x-small") {
-      width: 100%;
+      min-width: 100%;
     }
 
     @include respond-to("small") {
-      width: 225px;
+      min-width: 200px;
     }
 
     @include respond-to("medium") {
-      width: 225px;
+      min-width: 200px ;
     }
     @include respond-to("large") {
-      width: 225px;
+      min-width: 225px ;
     }
 
     &:hover {
@@ -268,7 +268,7 @@
 
     .pax {
       font-size: 14px;
-      font-weight: 18px;
+
       font-weight: 700;
     }
 
@@ -278,4 +278,16 @@
       font-weight: 600;
     }
   }
+}
+
+
+.count-cage{
+  font-size: 26px;
+  font-weight: 600;
+  padding: 15px 0;
+  color: #ed3e84;
+  span{
+    color: #454545;
+  }
+
 }
