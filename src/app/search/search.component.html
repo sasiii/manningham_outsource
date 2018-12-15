@@ -1,162 +1,69 @@
 <div class="container">
-  <div class="main_search">
-    <div class="mmc_flex--container">
-      <div class="mmc_flex__item--inherit input_cage">
+    <div class="main_search">
+        <div class="mmc_flex--container">
+            <div class="mmc_flex__item--inherit input_cage">
 
-        <mat-form-field class="example-full-width remove_underline">
-        <input type="tel" matInput placeholder="" value="Search Venue, Facility or Location" class="mat-font--change search-input">
-        </mat-form-field>
-</div>
-<div class="mmc_flex__item filter_cage">
+                <mat-form-field class="example-full-width remove_underline">
+                    <input type="tel" matInput placeholder="" value="Search Venue, Facility or Location"
+                           class="mat-font--change search-input">
+                </mat-form-field>
+            </div>
+            <div class="mmc_flex__item filter_cage">
 
-  <div class="mmc_flex--container">
-    <div class="mmc_flex__item--inherit  pax">
+                <div class="mmc_flex--container">
+                    <div class="mmc_flex__item--inherit  pax">
 
-      <form class="example-form">
-        <mat-form-field class="example-full-width">
-          <input matInput placeholder="Pax" value="10">
-        </mat-form-field>
-
-
-      </form>
+                        <form class="example-form">
+                            <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Pax" value="10">
+                            </mat-form-field>
 
 
-    </div>
+                        </form>
 
 
-    <div class="mmc_flex__item--inherit date">
+                    </div>
 
 
-
-      <mat-form-field class="remove_underline">
-        <input matInput [matDatepicker]="picker" placeholder="Date" [value]="Date">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
+                    <div class="mmc_flex__item--inherit date">
 
 
-    </div>
-    <div class="mmc_flex__item--inherit time">-
- <!--time picker -->
-      <!--<mat-form-field class="remove_underline">-->
-        <!--<input matInput [matDatepicker]="picker" placeholder="Date" [value]="Date">-->
-        <!--<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>-->
-        <!--<mat-datepicker #picker></mat-datepicker>-->
-      <!--</mat-form-field>-->
-
-    </div>
+                        <mat-form-field class="remove_underline">
+                            <input matInput [matDatepicker]="picker" placeholder="Date" [value]="Date">
+                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                            <mat-datepicker #picker></mat-datepicker>
+                        </mat-form-field>
 
 
+                    </div>
+                    <div class="mmc_flex__item--inherit time">-
+                        <!--time picker -->
+                        <!--<mat-form-field class="remove_underline">-->
+                        <!--<input matInput [matDatepicker]="picker" placeholder="Date" [value]="Date">-->
+                        <!--<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>-->
+                        <!--<mat-datepicker #picker></mat-datepicker>-->
+                        <!--</mat-form-field>-->
+
+                    </div>
 
 
-    <div class="mmc_flex__item--inherit btn--cage">
-      <div class="mmc_flex--container">
-        <div class="mmc_flex__item--inherit mmc_flex__item--vcenter btn--search">
-          <i class="material-icons">
-          search
-          </i>
-          <span class="btn-text">Search</span>
+                    <div class="mmc_flex__item--inherit btn--cage">
+                        <div class="mmc_flex--container">
+                            <div class="mmc_flex__item--inherit mmc_flex__item--vcenter btn--search">
+                                <i class="material-icons">
+                                    search
+                                </i>
+                                <span class="btn-text">Search</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-
-
-</div>
-</div>
-</div>
 
 </div>
 
 
-
-
-<!--<div class="container">-->
-<!--<div class="man_search">-->
-      <!--<div class="man_outer-wrapper">-->
-        <!--<div class="man_inner-wrapper">-->
-          <!--<div class="man_wrapper-items&#45;&#45;left">-->
-            <!--<div class="">-->
-              <!--<div class="items">-->
-                <!--<mat-form-field class="example-full-width remove_underline">-->
-                  <!--<input type="tel" matInput placeholder="" value="Search Venue, Facility or Location" class="mat-font&#45;&#45;change search-input">-->
-                <!--</mat-form-field>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-          <!--<div class="man_wrapper-items&#45;&#45;right">-->
-            <!--<div class="inner-right">-->
-              <!--<div class="items date">-->
-                <!--<mat-form-field class="remove_underline">-->
-                  <!--<input matInput [matDatepicker]="picker" placeholder="" value="Date" class="mat-font&#45;&#45;change">-->
-                  <!--<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>-->
-                  <!--<mat-datepicker #picker></mat-datepicker>-->
-                <!--</mat-form-field>-->
-              <!--</div>-->
-              <!--<div class="items time">-->
-                <!--<mat-form-field class="example-full-width remove_underline">-->
-                  <!--<input type="tel" matInput placeholder="" value="Time" class="mat-font&#45;&#45;change">-->
-                  <!--<mat-icon [matMenuTriggerFor]="menu" matSuffix>access_time</mat-icon>-->
-                  <!--<mat-menu #menu="matMenu" class="time-popup">-->
-                    <!--<div class="mmc_flex&#45;&#45;container" (click)="$event.stopPropagation();">-->
-                      <!--<div class="mmc_flex__item">-->
-                        <!--<div class="mmc_flex&#45;&#45;container">-->
-                          <!--<div class="mmc_flex__item clock">-->
-                            <!--<i class="material-icons">-->
-                              <!--access_time-->
-                            <!--</i>-->
-                          <!--</div>-->
-                          <!--<div class="mmc_flex__item">-->
-                            <!--<mat-form-field [color]="options.value.color">-->
-                              <!--<input matInput type="number" placeholder="START TIME" formControlName="fontSize" min="10">-->
-                              <!--<mat-error *ngIf="options.get('fontSize')?.invalid">Min size: 10px</mat-error>-->
-                            <!--</mat-form-field>-->
-                          <!--</div>-->
-                        <!--</div>-->
-                      <!--</div>-->
-                      <!--<div class="mmc_flex__item">-->
-                        <!--<div class="mmc_flex&#45;&#45;container">-->
-                          <!--<div class="mmc_flex__item clock">-->
-                            <!--<i class="material-icons">-->
-                              <!--access_time-->
-                            <!--</i>-->
-                          <!--</div>-->
-                          <!--<div class="mmc_flex__item">-->
-                            <!--<mat-form-field [color]="options.value.color">-->
-                              <!--<input matInput type="number" placeholder="END TIME" formControlName="fontSize" min="10">-->
-                              <!--<mat-error *ngIf="options.get('fontSize')?.invalid">Min size: 10px</mat-error>-->
-                            <!--</mat-form-field>-->
-                          <!--</div>-->
-                        <!--</div>-->
-                      <!--</div>-->
-                    <!--</div>-->
-                    <!--<div class="mmc_flex&#45;&#45;container btn-content">-->
-                      <!--<div class="btn__card main mmc_flex__item&#45;&#45;vcenter">-->
-                        <!--APPLY-->
-                      <!--</div>-->
-                    <!--</div>-->
-                  <!--</mat-menu>-->
-                <!--</mat-form-field>-->
-              <!--</div>-->
-              <!--<div class="items filter">-->
-                <!--<div class="image-wrapper" [matMenuTriggerFor]="menu1">-->
-                  <!--<img src="../../assets/images/funnel.svg" alt="funnel icon" />-->
-                  <!--<div class="font__normal font__upper">filter</div>-->
-                <!--</div>-->
-                <!--<mat-menu #menu1="matMenu" class="filter-popup">-->
-                  <!--<div class="mmc_flex&#45;&#45;container" (click)="$event.stopPropagation();"></div>-->
-                <!--</mat-menu>-->
-              <!--</div>-->
-              <!--<div class="items">-->
-                <!--<button mat-button class="serarch-btn">-->
-                  <!--<i class="material-icons">-->
-                    <!--search-->
-                  <!--</i>-->
-                  <!--<span class="btn-text">Search</span>-->
-                <!--</button>-->
-              <!--</div>-->
-            <!--</div>-->
-          <!--</div>-->
-        <!--</div>-->
-      <!--</div>-->
-<!--</div>-->

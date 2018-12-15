@@ -4,19 +4,19 @@
     min-width:300px ;
   }
   @include respond-to("small") {
-    min-width:700px ;
+    min-width:600px ;
   }
   @include respond-to("medium") {
-    min-width:1000px ;
+    min-width:900px ;
   }
   @include respond-to("large") {
-    min-width:1100px ;
+    min-width:1000px ;
   }
   @include respond-to("x-large") {
     min-width:1300px ;
   }
   @include respond-to("xx-large") {
-    min-width:1900px ;
+    min-width:1600px ;
   }
 }
 
