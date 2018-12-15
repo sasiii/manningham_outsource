@@ -46,6 +46,7 @@
       }
     }
     .man_wrapper-items--left {
+      @include align-self(center);
       // width: 60%;
       flex-grow: 1;
       @include respond-to("small") {
@@ -56,6 +57,7 @@
       }
     }
     .man_wrapper-items--right {
+      @include align-self(center);
       // width: 40%;
       .inner-right {
         display: flex;
