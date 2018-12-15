@@ -1,7 +1,5 @@
+@import "../helpers/mixins";
 .main_search {
-
-
-
   .mat-form-field-underline {
     display: none;
   }
@@ -25,8 +23,6 @@
   @include respond-to("x-large") {
     height: 60px;
   }
-
-
 
   @include border-radius(5px);
 
@@ -54,7 +50,6 @@
     padding-left: 15px;
     color: #656565;
 
-
     @include respond-to("x-small") {
       flex: 0 0 100%;
       border-bottom: 1px solid #ccc;
@@ -75,15 +70,12 @@
       border-bottom: none;
     }
 
-
-
     .mat-form-field {
       width: 100%;
     }
     .mat-form-field-appearance-legacy .mat-form-field-underline {
       display: none;
     }
-
   }
 
   .filter_cage {
@@ -92,13 +84,9 @@
       background-color: #00bfa5;
     }
 
-
-
-
-
-    .pax,.date,.btn--cage {
-
-
+    .pax,
+    .date,
+    .btn--cage {
       @include respond-to("x-small") {
         width: 100%;
         border-bottom: 1px solid #ccc;
@@ -110,7 +98,6 @@
       @include respond-to("medium") {
         width: 25%;
         border-bottom: 1px solid #ccc;
-
       }
       @include respond-to("large") {
         width: 25%;
@@ -126,17 +113,13 @@
   .btn--cage {
     width: 25%;
 
-
     @include respond-to("medium") {
       width: 15%;
     }
     @include respond-to("large") {
       width: 25%;
     }
-
   }
-
-
 
   .pax {
     border-left: 1px solid #ccc;
@@ -149,7 +132,6 @@
     .mat-form-field-appearance-legacy .mat-form-field-wrapper {
       margin-top: 9px;
     }
-
   }
   .date {
     border-right: 1px solid #ccc;
@@ -160,14 +142,6 @@
       width: 30%;
     }
 
-
-
-
-
-
-
-
-
     .mat-datepicker-toggle-default-icon {
       width: 30px !important;
     }
@@ -177,13 +151,11 @@
       top: -29px;
       position: absolute;
       left: -35px;
-
     }
     .mat-form-field {
       width: 100%;
       margin-top: 10px;
     }
-
   }
   .time {
     width: 25%;
@@ -212,8 +184,7 @@
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    &:hover{
-
+    &:hover {
       background-color: #992e98;
     }
 
@@ -221,7 +192,7 @@
     font-size: 18px;
     font-weight: 600;
 
-    span{
+    span {
       @include respond-to("medium") {
         display: none;
       }
@@ -231,17 +202,12 @@
       }
     }
 
-
-
     i {
       font-size: 30px !important;
       margin-right: 10px;
       font-size: 16px;
-
     }
-
   }
-
 }
 
 //
@@ -400,21 +366,21 @@
 //    }
 //  }
 //}
-//.time-popup {
-//  padding: 10px;
-//  max-width: 100% !important;
-//  .clock {
-//    padding-right: 5px;
-//    display: flex;
-//    align-items: center;
-//  }
-//  .btn-content {
-//    justify-content: flex-end !important;
-//  }
-//  .material-icons {
-//    display: inline !important;
-//  }
-//}
+.time-popup {
+  padding: 10px;
+  max-width: 100% !important;
+  .clock {
+    padding-right: 5px;
+    display: flex;
+    align-items: center;
+  }
+  .btn-content {
+    justify-content: flex-end !important;
+  }
+  .material-icons {
+    display: inline !important;
+  }
+}
 //
 //.mat-font--change {
 //  font-family: $font-montserrat;
@@ -431,3 +397,26 @@
 //.mat-icon {
 //  font-size: 25px !important;
 //}
+.filter {
+  text-align: -webkit-right;
+  &--menu {
+    background-color: #202020;
+    max-width: 100% !important;
+    color: #fff;
+    .mmc_flex--container {
+      flex-direction: column;
+      @include padding-all(30);
+    }
+    .mat-form-field {
+      width: 100%;
+    }
+    .btn-section {
+      @include padding-top(30);
+      // justify-content: flex-end !important;
+    }
+    .close-btn {
+      text-align: -webkit-right;
+      @include padding-bottom(30);
+    }
+  }
+}

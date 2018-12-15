@@ -4,6 +4,7 @@
 .booking--details {
   padding: 15px;
   .details-section {
+    color: #696969;
     .contact-wrapper {
       background-color: #202020;
       color: #fff;
@@ -21,13 +22,17 @@
     .left {
       > .mmc_flex--container {
         flex-direction: column;
+        padding-bottom: 50px;
       }
       flex-basis: 80%;
       padding-right: 20px;
       p {
         text-align: justify;
+        @include font-weight(medium);
       }
       .facility-list {
+        @include font-weight(semibold);
+        // @include padding-top(30px);
         flex-direction: column;
         // .title {
         //   position: relative;
@@ -53,32 +58,72 @@
               &::before {
                 font-family: "Material Icons";
                 content: "person";
-                padding-right: 10px;
+                padding-right: 15px;
+                font-size: 25px;
               }
             }
           }
         }
       }
     }
+
+    .right {
+      flex-direction: column;
+      margin: auto;
+    }
     .title {
-      position: relative;
-      width: 100%;
-      &::after {
-        width: 100%;
-        height: 2px;
-        content: "";
-        border-bottom: 1px solid red;
-        position: absolute;
+      @include font-size(22);
+      padding-bottom: 25px;
+      // position: relative;
+
+      .name {
+        &::before {
+          content: "";
+          width: 100%;
+          height: 2px;
+          border-bottom: 1px solid #e3e3e3;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          z-index: 1;
+        }
+        position: relative;
         left: 0;
-        top: 50%;
-        z-index: 1;
+        z-index: 100;
+        position: -webkit-sticky;
+        width: 100%;
+        span {
+          color: #ed3e84;
+        }
       }
     }
     .doc-sec {
+      @include font-weight(semibold);
       flex-direction: column;
+
       .doc-container {
         background-color: #eee;
         border-radius: 5px;
+        .doc-icon {
+          @include padding-all(20);
+          background-color: #006ff8;
+          border-radius: 5px 0 0 5px;
+          i {
+            color: #fff;
+            align-self: center;
+          }
+        }
+        .middle-sec {
+          @include padding-left(20);
+          align-self: center;
+        }
+        .down-sec {
+          @include padding-all(15);
+          text-align: -webkit-center;
+          .down-icon {
+            color: #ed3e84;
+          }
+        }
       }
     }
   }

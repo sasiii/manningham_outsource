@@ -1,2 +1,54 @@
+<app-search></app-search>
 
-<app-search-result></app-search-result>
+
+<div class="filter">
+    <button mat-button [matMenuTriggerFor]="menu">Filter</button>
+    <mat-menu #menu="matMenu" class="filter--menu">
+        <div class="mmc_flex--container" (click)="$event.stopPropagation();">
+            <div class="mmc_flex__item close-btn">
+                <i class="material-icons">
+                    close
+                </i>
+            </div>
+            <div class="mmc_flex__item">
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="ATTENDEES" value="ENTER HERE">
+                </mat-form-field>
+            </div>
+            <div class="mmc_flex__item">
+                <mat-form-field>
+                    <mat-select placeholder="FACILITIES">
+                        <mat-option>
+                            ENTER FACILITY
+                        </mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="mmc_flex__item">
+                <mat-form-field class="example-full-width">
+                    <input matInput placeholder="SUBURBS" value="ENTER HERE">
+                </mat-form-field>
+            </div>
+            <div class="mmc_flex__item btn-section">
+                <button class="btn login__submit font__large font__regular font__upper">
+                    proceed
+                </button>
+            </div>
+        </div>
+    </mat-menu>
+</div>
+
+
+<div class="body-search">
+    <div class="container">
+
+
+        <div class="mmc_flex--container count-cage ">
+            <div class="mmc_flex__item p75">234 facilities <span>found.</span> </div>
+            <div class="mmc_flex__item p25">2</div>
+
+        </div>
+
+
+
+        <app-search-result></app-search-result>

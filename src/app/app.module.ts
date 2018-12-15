@@ -31,7 +31,8 @@ const appRoutes: Routes = [
   // { path: "", component: LoginComponent }
   { path: "search-result", component: SearchResultComponent },
   { path: "payment", component: PaymentComponent },
-  { path: "booking-details", component: BookingDetailsComponent }
+  { path: "booking-details", component: BookingDetailsComponent },
+  { path: "booking-search", component: BookingSearchComponent }
 
 ];
 @NgModule({
