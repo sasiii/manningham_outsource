@@ -1,68 +1,67 @@
 <div class="container">
-    <div class="main_search">
+  <div class="main_search">
+    <div class="mmc_flex--container">
+      <div class="mmc_flex__item--inherit input_cage">
+
+        <mat-form-field class="example-full-width remove_underline">
+          <input type="tel" matInput placeholder="" value="Search Venue, Facility or Location"
+                 class="mat-font--change search-input">
+        </mat-form-field>
+      </div>
+      <div class="mmc_flex__item filter_cage">
+
         <div class="mmc_flex--container">
-            <div class="mmc_flex__item--inherit input_cage">
+          <div class="mmc_flex__item--inherit  pax">
 
-                <mat-form-field class="example-full-width remove_underline">
-                    <input type="tel" matInput placeholder="" value="Search Venue, Facility or Location"
-                           class="mat-font--change search-input">
-                </mat-form-field>
+            <form class="example-form">
+              <mat-form-field class="example-full-width">
+                <input matInput placeholder="Pax" value="10">
+              </mat-form-field>
+
+
+            </form>
+
+
+          </div>
+
+
+          <div class="mmc_flex__item--inherit date">
+
+
+            <mat-form-field class="remove_underline">
+              <input matInput [matDatepicker]="picker" placeholder="Date" [value]="Date">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+
+
+          </div>
+          <div class="mmc_flex__item--inherit time">-
+            <!--time picker -->
+            <!--<mat-form-field class="remove_underline">-->
+            <!--<input matInput [matDatepicker]="picker" placeholder="Date" [value]="Date">-->
+            <!--<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>-->
+            <!--<mat-datepicker #picker></mat-datepicker>-->
+            <!--</mat-form-field>-->
+
+          </div>
+
+
+          <div class="mmc_flex__item--inherit btn--cage">
+            <div class="mmc_flex--container">
+              <div class="mmc_flex__item--inherit mmc_flex__item--vcenter btn--search">
+                <i class="material-icons">
+                  search
+                </i>
+                <span class="btn-text">Search</span>
+              </div>
             </div>
-            <div class="mmc_flex__item filter_cage">
-
-                <div class="mmc_flex--container">
-                    <div class="mmc_flex__item--inherit  pax">
-
-                        <form class="example-form">
-                            <mat-form-field class="example-full-width">
-                                <input matInput placeholder="Pax" value="10">
-                            </mat-form-field>
-
-                        </form>
-
-
-                    </div>
-
-
-                    <div class="mmc_flex__item--inherit date">
-
-
-                        <mat-form-field class="remove_underline">
-                            <input matInput [matDatepicker]="picker" placeholder="Date" [value]="Date">
-                            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                            <mat-datepicker #picker></mat-datepicker>
-                        </mat-form-field>
-
-
-                    </div>
-                    <div class="mmc_flex__item--inherit time">-
-                        <!--time picker -->
-                        <!--<mat-form-field class="remove_underline">-->
-                        <!--<input matInput [matDatepicker]="picker" placeholder="Date" [value]="Date">-->
-                        <!--<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>-->
-                        <!--<mat-datepicker #picker></mat-datepicker>-->
-                        <!--</mat-form-field>-->
-
-                    </div>
-
-
-                    <div class="mmc_flex__item--inherit btn--cage">
-                        <div class="mmc_flex--container">
-                            <div class="mmc_flex__item--inherit mmc_flex__item--vcenter btn--search">
-                                <i class="material-icons">
-                                    search
-                                </i>
-                                <span class="btn-text">Search</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
+          </div>
         </div>
+
+
+      </div>
     </div>
+  </div>
 
 </div>
-
-
