@@ -64,12 +64,15 @@
     }
     @include respond-to("medium") {
       flex: 0 0 50%;
+      border-bottom: none;
     }
     @include respond-to("large") {
       flex: 0 0 50%;
+      border-bottom: none;
     }
     @include respond-to("x-large") {
       flex: 0 0 50%;
+      border-bottom: none;
     }
 
 
@@ -94,22 +97,28 @@
 
 
     .pax,.date,.btn--cage {
-      border-bottom: 1px solid #ccc;
+
 
       @include respond-to("x-small") {
         width: 100%;
+        border-bottom: 1px solid #ccc;
       }
       @include respond-to("small") {
         width: 25%;
+        border-bottom: 1px solid #ccc;
       }
       @include respond-to("medium") {
         width: 25%;
+        border-bottom: 1px solid #ccc;
+
       }
       @include respond-to("large") {
         width: 25%;
+        border-bottom: none;
       }
       @include respond-to("x-large") {
         width: 25%;
+        border-bottom: none;
       }
     }
   }
