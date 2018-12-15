@@ -1,11 +1,19 @@
 @import "../layout/grid";
+button {
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
 .btn {
   // @include respond-to("xx-large") {
+  outline-style: none;
   height: 60px;
   width: 281px;
   background: linear-gradient(-241deg, #2388f0 0%, #00698f 100%);
   border-radius: 30px;
   color: white;
+
   &--light {
     border: 1px solid white;
     color: white;
@@ -41,5 +49,7 @@
 .btn__validate {
   @include padding-left(10);
   @include padding-right(10);
-  border: 1px dashed darkgray;
+  &.mat-button {
+    border: 1px dashed darkgray;
+  }
 }
