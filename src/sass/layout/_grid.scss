@@ -1,20 +1,27 @@
-$breakpoints-typography: (
-  "x-small": 300px,
-  "small": 768px,
-  "medium": 1024px,
-  "large": 1200px,
-  "x-large": 1440px,
-  "xx-large": 1600px,
-  "xxx-large": 1900px
-);
-@mixin respond-to($breakpoint) {
-  @content;
-  @if map-has-key($breakpoints-typography, $breakpoint) {
-    @media (min-width: #{map-get($breakpoints-typography, $breakpoint)}) {
-      @content;
-    }
-  } @else {
-    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
-        + "Please make sure it is defined in `$breakpoints` map.";
+.container{
+
+  @include respond-to("x-small") {
+    width:300px ;
   }
+  @include respond-to("small") {
+    width:768px ;
+  }
+  @include respond-to("medium") {
+    width:1000px ;
+  }
+  @include respond-to("large") {
+    width:1100px ;
+  }
+  @include respond-to("x-large") {
+    width:1400px ;
+  }
+  @include respond-to("xx-large") {
+    width:1800px ;
+  }
+}
+
+
+.body-search{
+  background-color: #eee;
+  padding: 20px 0px;
 }

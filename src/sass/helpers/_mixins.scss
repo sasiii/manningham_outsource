@@ -121,7 +121,7 @@ $breakpoints-typography: (
   'medium' :  1024px,
   'large'  :  1200px,
   'x-large':  1440px,
-  'xx-large':  1600px
+  'xx-large':  19\00px
 );
 @mixin respond-to($breakpoint) {
   @content;
