@@ -1,7 +1,28 @@
 @import "../../sass/helpers/functions";
 @import "../../sass/helpers/mixins";
 @import "../../sass/base/color";
+
+
+
+
+
 .footer {
+
+
+
+  background: #cbdd59;
+  background: -moz-linear-gradient(left, #cbdd59 0%, #cbdd59 2%, #cbdd59 49%, #00a650 50%, #00a650 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, #cbdd59), color-stop(2%, #cbdd59), color-stop(49%, #cbdd59), color-stop(50%, #00a650), color-stop(100%, #00a650));
+  background: -webkit-linear-gradient(left, #cbdd59 0%, #cbdd59 2%, #cbdd59 49%, #00a650 50%, #00a650 100%);
+  background: -o-linear-gradient(left, #cbdd59 0%, #cbdd59 2%, #cbdd59 49%, #00a650 50%, #00a650 100%);
+  background: -ms-linear-gradient(left, #cbdd59 0%, #cbdd59 2%, #cbdd59 49%, #00a650 50%, #00a650 100%);
+  background: linear-gradient(to right, #cbdd59 0%, #cbdd59 2%, #cbdd59 49%, #00a650 50%, #00a650 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cbdd59', endColorstr='#00a650', GradientType=1 );
+
+
+
+
+
   .container {
     padding: 0;
     @include font-size();
@@ -82,7 +103,7 @@
   }
   &__top-left {
     // padding-left: 200px;
-    padding-left: 100px;
+   // padding-left: 100px;
   }
   &__top-right {
     // padding-right: 200px;
@@ -91,14 +112,14 @@
     flex-direction: column;
   }
   &__bottom-left {
-    padding-left: 50px;
+   // padding-left: 50px;
     flex-direction: column;
     justify-content: center;
     display: flex;
   }
   &__bottom-right {
-    padding-right: 50px;
-    padding-left: 50px;
+   // padding-right: 50px;
+   padding-left: 50px;
     display: flex;
     padding-bottom: 15px;
   }
