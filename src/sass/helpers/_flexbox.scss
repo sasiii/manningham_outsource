@@ -136,7 +136,6 @@
 .mmc_flex{
     &--container{
       @include flexbox();
-
        &.space-between{
          justify-content: space-between !important;
        }
