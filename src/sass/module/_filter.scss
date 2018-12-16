@@ -1,9 +1,8 @@
 @import "../helpers/mixins";
-.main_search {
+.main_filter {
   .mat-form-field-underline {
     display: none;
   }
-
   border: 1px solid #ccc;
   background-color: #fff;
   height: 60px;
@@ -46,7 +45,7 @@
   }
 
   .input_cage {
-    flex: 0 0 50%;
+    flex: 0 0 60%;
     padding-left: 15px;
     color: #656565;
 
@@ -55,37 +54,32 @@
       border-bottom: 1px solid #ccc;
     }
     @include respond-to("small") {
-      flex: 0 0 50%;
+      flex: 0 0 60%;
     }
     @include respond-to("medium") {
-      flex: 0 0 50%;
+      flex: 0 0 60%;
       border-bottom: none;
     }
     @include respond-to("large") {
-      flex: 0 0 50%;
+      flex: 0 0 60%;
       border-bottom: none;
     }
     @include respond-to("x-large") {
-      flex: 0 0 50%;
+      flex: 0 0 60%;
       border-bottom: none;
     }
 
     .mat-form-field {
       width: 100%;
     }
-    .mat-form-field-appearance-legacy .mat-form-field-underline {
-      display: none;
-    }
   }
 
   .filter_cage {
-    flex: 0 0 50%;
+    flex: 0 0 40%;
     .input_cage {
       background-color: #00bfa5;
     }
 
-    .pax,
-    .date,
     .btn--cage {
       @include respond-to("x-small") {
         width: 100%;
@@ -96,35 +90,35 @@
         border-bottom: 1px solid #ccc;
       }
       @include respond-to("medium") {
-        width: 25%;
+        width: 50%;
         border-bottom: 1px solid #ccc;
       }
       @include respond-to("large") {
-        width: 25%;
+        width: 50%;
         border-bottom: none;
       }
       @include respond-to("x-large") {
-        width: 25%;
+        width: 50%;
         border-bottom: none;
       }
     }
   }
 
   .btn--cage {
-    width: 25%;
+    width: 50%;
 
     @include respond-to("medium") {
-      width: 15%;
+      width: 50%;
     }
     @include respond-to("large") {
-      width: 25%;
+      width: 50%;
     }
   }
 
   .pax {
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
-    width: 25%;
+    width: 50%;
     padding: 0 5px;
     .mat-form-field {
       width: 100%;
@@ -135,15 +129,15 @@
   }
   .date {
     border-right: 1px solid #ccc;
-    width: 25%;
+    width: 50%;
     padding: 0 5px;
 
     @include respond-to("medium") {
-      width: 30%;
+      width: 50%;
     }
 
     .mat-datepicker-toggle-default-icon {
-      width: 30px !important;
+      width: 50px !important;
     }
     .mat-icon-button {
       width: 30px !important;
@@ -157,40 +151,45 @@
       margin-top: 10px;
     }
   }
-  .time {
-    width: 25%;
-    padding: 0 5px;
 
-    @include respond-to("medium") {
-      width: 30%;
-    }
-
-    .mat-datepicker-toggle-default-icon {
-      width: 30px;
-    }
-    .mat-form-field {
-      width: 100%;
-      margin-top: 10px;
-    }
-  }
   .btn--search {
-    background-color: #ed3e84;
-    color: #fff;
-    width: 100%;
+    text-transform: uppercase;
     text-align: center;
     justify-content: center;
-    cursor: pointer;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    &:hover {
-      background-color: #992e98;
+
+    &.--facility {
+      //   cursor: pointer;
+      border-bottom: 5px solid #2ecd73;
+      color: #fff;
+      -webkit-transition: all 0.5s ease;
+      -moz-transition: all 0.5s ease;
+      -ms-transition: all 0.5s ease;
+      -o-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+      background-color: #80d4a3;
+
+      width: 80%;
+    }
+    &.--venue {
+      cursor: pointer;
+      color: #656565;
+      width: 100%;
     }
 
-    @include border-radius(0px 5px 5px 0px);
-    font-size: 18px;
+    &._icon {
+      justify-content: center;
+      background-color: #30b469;
+      color: #fff;
+      width: 20%;
+      text-align: center;
+      justify-content: center;
+      &:hover {
+        background-color: #992e98;
+      }
+    }
+
+    @include border-radius(1px);
+    @include font-size(18);
     font-weight: 600;
 
     span {

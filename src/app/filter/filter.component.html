@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="main_filter">
+    <div class="mmc_flex--container">
+      <div class="mmc_flex__item--inherit input_cage">
+
+        <mat-form-field class="example-full-width remove_underline">
+          <input type="tel" matInput placeholder="" value="SORTED BY" class="mat-font--change search-input">
+        </mat-form-field>
+      </div>
+      <div class="mmc_flex__item filter_cage">
+
+        <div class="mmc_flex--container">
+          <div class="mmc_flex__item--inherit btn--cage">
+            <div class="mmc_flex--container">
+              <div class="mmc_flex__item mmc_flex__item--vcenter btn--search --facility">
+                <span class="btn-text">facility</span>
+              </div>
+              <div class="mmc_flex__item--inherit mmc_flex__item--vcenter btn--search _icon" [matMenuTriggerFor]="menu">
+                <i class="material-icons">
+                  filter_list
+                </i>
+              </div>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item>ASCENDING</button>
+                <button mat-menu-item>DECENDING</button>
+              </mat-menu>
+            </div>
+          </div>
+
+
+
+          <div class="mmc_flex__item--inherit btn--cage">
+            <div class="mmc_flex--container">
+              <div class="mmc_flex__item--inherit mmc_flex__item--vcenter btn--search --venue">
+                <span class="btn-text">venue</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -22,6 +22,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { SearchResultComponent } from './search-result/search-result.component';
 import { BookingSearchComponent } from './booking-search/booking-search.component';
 import { BookingDetailsComponent } from './booking-details/booking-details.component';
+import { FilterComponent } from './filter/filter.component';
 
 const appRoutes: Routes = [
   { path: "forgot-password", component: ForgotPasswordComponent },
@@ -32,7 +33,9 @@ const appRoutes: Routes = [
   { path: "search-result", component: SearchResultComponent },
   { path: "payment", component: PaymentComponent },
   { path: "booking-details", component: BookingDetailsComponent },
-  { path: "booking-search", component: BookingSearchComponent }
+  { path: "booking-search", component: BookingSearchComponent },
+  { path: "filter", component: FilterComponent }
+
 
 ];
 @NgModule({
@@ -49,7 +52,8 @@ const appRoutes: Routes = [
     FooterComponent,
     SearchResultComponent,
     BookingSearchComponent,
-    BookingDetailsComponent
+    BookingDetailsComponent,
+    FilterComponent
   ],
   imports: [
     BrowserModule,
