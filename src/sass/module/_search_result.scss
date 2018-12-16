@@ -192,14 +192,14 @@
 
     .lbl_discount {
       @include font-size_defalt(35);
-      padding: 5px 10px;
+      padding: 3px 10px;
       background-color: #ed3e84;
       color: #fff;
       text-align: right;
       font-size: 14px;
       position: relative;
-      height: 40px;
-      width: 100px;
+      height: 35px;
+      width: 120px;
 
       &::before {
         content: "";
