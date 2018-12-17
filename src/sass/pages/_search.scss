@@ -46,7 +46,7 @@
   }
 
   .input_cage {
-    flex: 0 0 50%;
+    flex: 0 0 45%;
     padding-left: 15px;
     color: #656565;
 
@@ -55,18 +55,18 @@
       border-bottom: 1px solid #ccc;
     }
     @include respond-to("small") {
-      flex: 0 0 50%;
+      flex: 0 0 45%;
     }
     @include respond-to("medium") {
-      flex: 0 0 50%;
+      flex: 0 0 45%;
       border-bottom: none;
     }
     @include respond-to("large") {
-      flex: 0 0 50%;
+      flex: 0 0 45%;
       border-bottom: none;
     }
     @include respond-to("x-large") {
-      flex: 0 0 50%;
+      flex: 0 0 45%;
       border-bottom: none;
     }
 
@@ -79,7 +79,7 @@
   }
 
   .filter_cage {
-    flex: 0 0 50%;
+    flex: 0 0 55%;
     .input_cage {
       background-color: #00bfa5;
     }
