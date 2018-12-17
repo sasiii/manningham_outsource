@@ -39,6 +39,7 @@ button {
     color: #006ff8;
     transition: all 0.5s ease;
     @include justify-content(center);
+    text-transform: uppercase;
 
     &:hover {
       background-color: #006ff8;
