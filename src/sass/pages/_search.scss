@@ -1,7 +1,41 @@
 @import "../helpers/mixins";
 .main_search {
+
+  .date,.time{
+    .mat-form-field-infix{
+      max-width: 150px;
+
+      @include respond-to("x-small") {
+        max-width: 100%;
+      }
+      @include respond-to("small") {
+        max-width: 100%;
+      }
+      @include respond-to("medium") {
+        max-width: 90%;
+      }
+      @include respond-to("large") {
+        max-width: 150px;
+      }
+      @include respond-to("x-large") {
+        max-width: 150px;
+      }
+
+    }
+  }
+
+
+
   .mat-form-field-underline {
     display: none;
+  }
+
+  .mat-form-field {
+    width: 100%;
+
+    padding-left: 5px;
+    padding-right: 5px;
+
   }
 
   border: 1px solid #ccc;
@@ -46,7 +80,7 @@
   }
 
   .input_cage {
-    flex: 0 0 45%;
+    flex: 0 0 50%;
     padding-left: 15px;
     color: #656565;
 
@@ -55,23 +89,23 @@
       border-bottom: 1px solid #ccc;
     }
     @include respond-to("small") {
-      flex: 0 0 45%;
+      flex: 0 0 50%;
     }
     @include respond-to("medium") {
-      flex: 0 0 45%;
+      flex: 0 0 50%;
       border-bottom: none;
     }
     @include respond-to("large") {
-      flex: 0 0 45%;
+      flex: 0 0 50%;
       border-bottom: none;
     }
     @include respond-to("x-large") {
-      flex: 0 0 45%;
+      flex: 0 0 50%;
       border-bottom: none;
     }
 
     .mat-form-field {
-      width: 100%;
+      max-width: 100%;
     }
     .mat-form-field-appearance-legacy .mat-form-field-underline {
       display: none;
@@ -79,14 +113,18 @@
   }
 
   .filter_cage {
-    flex: 0 0 55%;
+    flex: 0 0 50%;
     .input_cage {
       background-color: #00bfa5;
     }
 
-    .pax,
-    .date,
-    .btn--cage {
+
+    .date {
+
+
+      .mat-form-field{
+        padding-top: 10px;
+      }
       @include respond-to("x-small") {
         width: 100%;
         border-bottom: 1px solid #ccc;
@@ -96,15 +134,15 @@
         border-bottom: 1px solid #ccc;
       }
       @include respond-to("medium") {
-        width: 25%;
+        width: 30%;
         border-bottom: 1px solid #ccc;
       }
       @include respond-to("large") {
-        width: 25%;
+        width: 30%;
         border-bottom: none;
       }
       @include respond-to("x-large") {
-        width: 25%;
+        width: 30%;
         border-bottom: none;
       }
     }
@@ -113,19 +151,75 @@
   .btn--cage {
     width: 25%;
 
+    .btn--search{
+      @include respond-to("x-small") {
+        min-height: 50px;
+
+      }
+      @include respond-to("x-large") {
+        height: 100%;
+
+      }
+    }
+
+
+    .mmc_flex--container{
+
+      @include respond-to("medium") {
+        flex-direction: column;
+        width: 100%;
+      }
+      @include respond-to("large") {
+        flex-direction: column;
+        width: 100%;
+      }
+    }
+    @include respond-to("x-small") {
+      width: 100%;
+
+    }
+    @include respond-to("small") {
+      width: 100%;
+
+    }
     @include respond-to("medium") {
-      width: 15%;
+      width: 100%;
     }
     @include respond-to("large") {
       width: 25%;
     }
+    @include respond-to("x-large") {
+      width: 25%;
+      border-bottom: none;
+    }
+
   }
 
   .pax {
     border-left: 1px solid #ccc;
     border-right: 1px solid #ccc;
-    width: 25%;
-    padding: 0 5px;
+    border-bottom: transparent;
+
+    @include respond-to("x-small") {
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+    }
+    @include respond-to("small") {
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+    }
+
+    @include respond-to("medium") {
+      width: 100%;
+    }
+    @include respond-to("large") {
+      width: 100%;
+    }
+    @include respond-to("x-large") {
+      width: 15%;
+      border-bottom: none;
+    }
+    //padding: 0 5px;
     .mat-form-field {
       width: 100%;
     }
@@ -135,8 +229,8 @@
   }
   .date {
     border-right: 1px solid #ccc;
-    width: 25%;
-    padding: 0 5px;
+    width: 30%;
+   // padding: 0 5px;
 
     @include respond-to("medium") {
       width: 30%;
@@ -152,14 +246,11 @@
       position: absolute;
       left: -35px;
     }
-    .mat-form-field {
-      width: 100%;
-      margin-top: 10px;
-    }
+
   }
   .time {
-    width: 25%;
-    padding: 0 5px;
+    width: 30%;
+   // padding: 0 5px;
 
     @include respond-to("x-small") {
       width: 100%;
@@ -170,15 +261,15 @@
       border-bottom: 1px solid #ccc;
     }
     @include respond-to("medium") {
-      width: 25%;
+      width: 30%;
       border-bottom: 1px solid #ccc;
     }
     @include respond-to("large") {
-      width: 25%;
+      width: 30%;
       border-bottom: none;
     }
     @include respond-to("x-large") {
-      width: 25%;
+      width: 30%;
       border-bottom: none;
     }
 
@@ -222,7 +313,7 @@
 
     i {
       font-size: 30px !important;
-      margin-right: 10px;
+
       font-size: 16px;
     }
   }
