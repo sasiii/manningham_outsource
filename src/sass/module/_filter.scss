@@ -1,12 +1,16 @@
 @import "../helpers/mixins";
 .main_filter {
+
+
+
   .mat-form-field-underline {
     display: none;
   }
-  border: 1px solid #ccc;
+ // border: 1px solid #ccc;
   background-color: #fff;
   height: 60px;
-  margin: 20px 0;
+  margin: 20px 0px 25px 0px;
+
   @include respond-to("x-small") {
     height: auto;
   }
@@ -204,7 +208,7 @@
 
     i {
       font-size: 30px !important;
-      margin-right: 10px;
+     // margin-right: 10px;
       font-size: 16px;
     }
   }
@@ -399,6 +403,17 @@
 //}
 .filter {
   text-align: -webkit-right;
+  margin-top: 10px;
+
+  button{
+    border: 1px solid #cccc;
+    @include border-radius(5px 5px 0px 0px);
+    border-bottom: none;
+    margin-bottom: -1px;
+
+
+  }
+
   &--menu {
     background-color: #202020;
     max-width: 100% !important;
